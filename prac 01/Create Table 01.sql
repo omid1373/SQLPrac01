@@ -4,14 +4,14 @@ Create table schools(
 	name varchar(30) null,
 	address varchar(100) null,
 	contact_number varchar(12) null,
-	yeaR varchar(4) null,
+	year varchar(4) null,
 	principal varchar(30) null,
 	created_at datetime null,
 	updated_at datetime null
 )
 go
 Create table students(
-	id int identity(1,1) PRIMARY KEY not null,
+	id int PRIMARY KEY not null,
 	school_id int,
 	first_name varchar(30) null,
 	last_name varchar(30) null,
@@ -27,6 +27,8 @@ Create table courses(
 	name varchar(30) null,
 	book varchar(30) null,
 	term varchar(12) null,
+	year int default 1400,
+	credit int default 1,
 	created_at datetime null,
 	updated_at datetime null
 )
