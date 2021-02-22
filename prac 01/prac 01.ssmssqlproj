@@ -23,55 +23,55 @@
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>Create & Delete\\Create Database1.sql</FullPath>
+          <FullPath>Create Database1.sql</FullPath>
         </FileNode>
         <FileNode Name="Create Table 01.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>Create & Delete\\Create Table 01.sql</FullPath>
+          <FullPath>Create Table 01.sql</FullPath>
         </FileNode>
         <FileNode Name="Create Table 02.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>Create & Delete\\Create Table 02.sql</FullPath>
+          <FullPath>Create Table 02.sql</FullPath>
         </FileNode>
         <FileNode Name="Drop Tables 01.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>Create & Delete\\Drop Tables 01.sql</FullPath>
+          <FullPath>Drop Tables 01.sql</FullPath>
         </FileNode>
         <FileNode Name="Drop Tables 02.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>Create & Delete\\Drop Tables 02.sql</FullPath>
+          <FullPath>Drop Tables 02.sql</FullPath>
         </FileNode>
         <FileNode Name="Insert Trigger 01.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>Trigger\\Insert Trigger 01.sql</FullPath>
+          <FullPath>Insert Trigger 01.sql</FullPath>
         </FileNode>
         <FileNode Name="Insert Trigger 02.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>Trigger\\Insert Trigger 02.sql</FullPath>
+          <FullPath>Insert Trigger 02.sql</FullPath>
         </FileNode>
         <FileNode Name="Update Trigger 01.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>Trigger\\Update Trigger 01.sql</FullPath>
+          <FullPath>Update Trigger 01.sql</FullPath>
         </FileNode>
         <FileNode Name="Update Trigger 02.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>Trigger\\Update Trigger 02.sql</FullPath>
+          <FullPath>Update Trigger 02.sql</FullPath>
         </FileNode>
         <FileNode Name="practice.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):True</AssociatedConnectionMoniker>
