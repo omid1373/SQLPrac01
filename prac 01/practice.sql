@@ -1,4 +1,4 @@
-create trigger tr_C_school
+/*create trigger tr_C_school
 on schools
 after insert
 as
@@ -7,6 +7,9 @@ as
   FROM Inserted i
   WHERE schools.id = i.id
 go 
+*/
+
+go
 create trigger tr_U_school
 on schools
 after update
@@ -23,5 +26,23 @@ values ('pop ddup','bjnlgbdtihjeptgepgio','09121234567')
 
 update schools set name = 'grgrt' 
 where address = 'bjnlgbdtihjeptgepgio'
+
+/*
+------------Insert Trigger Procedure
+go
+create proc insertTrigger @table varchar(30), @id int
+AS
+BEGIN
+	DECLARE @Sql NVARCHAR(MAX);
+	DECLARE @tbl NVARCHAR(30);
+	SET @tbl = @table
+	SET @Sql = 'update '+@tbl+'
+	SET '+@tbl+'.updated_at = GETDATE() 
+	FROM Inserted i
+	WHERE '+@tbl+'.id = ' + @id
+	EXECUTE sp_executesql @Sql
+END
+*/
+go
 
 select * from schools

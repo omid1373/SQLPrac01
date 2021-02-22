@@ -11,8 +11,9 @@ Create table schools(
 )
 go
 Create table students(
-	id int PRIMARY KEY not null,
+	id int identity(1,1) PRIMARY KEY not null,
 	school_id int,
+	national_id varchar(10) UNIQUE,
 	first_name varchar(30) null,
 	last_name varchar(30) null,
 	phone_number varchar(12) null,
