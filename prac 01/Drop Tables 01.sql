@@ -1,3 +1,5 @@
+use MYDB
+go
 drop table students
 go
 drop table schools

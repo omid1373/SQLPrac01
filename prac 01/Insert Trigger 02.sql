@@ -1,3 +1,5 @@
+use MYDB
+go
 --------------- Trigger school_teacher
 create trigger tr_C_school_teacher
 on school_teachers

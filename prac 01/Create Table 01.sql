@@ -1,4 +1,7 @@
 --select CAST(GETDATE() AS DATE)
+use MYDB
+go
+
 Create table schools(
 	id int identity(1,1) PRIMARY KEY not null,
 	name varchar(30) null,
@@ -22,7 +25,7 @@ Create table students(
 	created_at datetime null,
 	updated_at datetime null
 )
-go 
+go
 Create table courses(
 	id int identity(1,1) PRIMARY KEY not null,
 	name varchar(30) null,

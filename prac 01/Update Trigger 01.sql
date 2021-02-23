@@ -1,3 +1,5 @@
+use MYDB
+go
 --------------- Trigger school
 create trigger tr_U_school
 on schools

@@ -1,3 +1,5 @@
+use MYDB
+go
 drop table school_teachers
 go
 drop table student_courses

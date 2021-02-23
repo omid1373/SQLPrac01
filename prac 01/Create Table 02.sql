@@ -1,3 +1,5 @@
+use MYDB
+go
 Create table school_teachers(
 	id int identity(1,1) PRIMARY KEY not null,
 	school_id int,
