@@ -42,7 +42,7 @@ Create table terms(
 )
 go
 Create table exams(
-	ExamID int PRIMARY KEY not null,
+	ExamID int identity(1,1) PRIMARY KEY not null,
 	ExamType nvarchar(30),
 )
 go
