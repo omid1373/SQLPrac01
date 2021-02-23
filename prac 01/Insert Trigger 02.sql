@@ -8,7 +8,17 @@ as
   update dbo.school_teachers
   SET school_teachers.CreatedAt = GETDATE()
   FROM Inserted i
-  WHERE school_teachers.id = i.id
+  WHERE school_teachers.SchoolTeacherId = i.SchoolTeacherId
+go 
+--------------- Trigger student_course
+create trigger tr_C_course_term
+on course_terms
+after insert
+as
+  update dbo.student_courses
+  SET course_terms.CreatedAt = GETDATE()
+  FROM Inserted i
+  WHERE course_terms.CourseTermId = i.CourseTermId
 go 
 --------------- Trigger student_course
 create trigger tr_C_student_course
@@ -18,7 +28,7 @@ as
   update dbo.student_courses
   SET student_courses.CreatedAt = GETDATE()
   FROM Inserted i
-  WHERE student_courses.id = i.id
+  WHERE student_courses.StudentCourseID = i.StudentCourseID
 go 
 --------------- Trigger course_exam
 create trigger tr_C_course_exam
@@ -28,7 +38,7 @@ as
   update dbo.course_exams
   SET course_exams.CreatedAt = GETDATE()
   FROM Inserted i
-  WHERE course_exams.id = i.id
+  WHERE course_exams.CourseExamID = i.CourseExamID
 go 
 --------------- Trigger teacher_courses
 create trigger tr_C_student_score
@@ -38,7 +48,7 @@ as
   update dbo.student_scores
   SET student_scores.CreatedAt = GETDATE()
   FROM Inserted i
-  WHERE student_scores.id = i.id
+  WHERE student_scores.StudentScoreId = i.StudentScoreId
 go 
 --------------- Trigger teacher_courses
 create trigger tr_C_teacher_courses
@@ -48,5 +58,5 @@ as
   update dbo.teacher_courses
   SET teacher_courses.CreatedAt = GETDATE()
   FROM Inserted i
-  WHERE teacher_courses.id = i.id
+  WHERE teacher_courses.TeacherCourseId = i.TeacherCourseId
 go 

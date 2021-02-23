@@ -9,3 +9,5 @@ go
 drop table courses
 go
 drop table teachers
+go
+drop table terms

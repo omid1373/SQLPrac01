@@ -18,10 +18,10 @@ Create table course_terms(
 	ExamId int,
 	CreatedAt datetime null,
 	UpdatedAt datetime null,
-	CONSTRAINT FK_CECourseId FOREIGN KEY (CourseId)
+	CONSTRAINT FK_CTCourseId FOREIGN KEY (CourseId)
     REFERENCES MYDB.dbo.courses(CourseId),
-    CONSTRAINT FK_CEExamID FOREIGN KEY (ExamId)
-    REFERENCES MYDB.dbo.exams(ExamId)
+    CONSTRAINT FK_CTExamID FOREIGN KEY (ExamId)
+    REFERENCES MYDB.dbo.exams(ExamID)
 )
 go
 Create table student_courses(
@@ -38,18 +38,18 @@ Create table student_courses(
 go
 Create table course_exams(
 	CourseExamID int identity(1,1) PRIMARY KEY not null,
-	CourseId int,
+	CourseTermId int,
 	ExamId int,
 	CreatedAt datetime null,
 	UpdatedAt datetime null,
 	CONSTRAINT FK_CEExamID FOREIGN KEY (ExamId)
     REFERENCES MYDB.dbo.exams(ExamId),
-    CONSTRAINT FK_CECourseID FOREIGN KEY (CourseId)
-    REFERENCES MYDB.dbo.courses(CourseId)
+    CONSTRAINT FK_CECourseID FOREIGN KEY (CourseTermId)
+    REFERENCES MYDB.dbo.course_terms(CourseTermId)
 )
 go
 Create table student_scores(
-	StudentScoreID int identity(1,1) PRIMARY KEY not null,
+	StudentScoreId int identity(1,1) PRIMARY KEY not null,
 	StudentCourseId int,
 	CourseExamId int,
 	Grade int not null,
@@ -63,12 +63,12 @@ Create table student_scores(
 go
 Create table teacher_courses(
 	TeacherCourseId int identity(1,1) PRIMARY KEY not null,
-	TeaeherId int,
+	TeacherId int,
 	CourseId int,
 	CreatedAt datetime null,
 	UpdatedAt datetime null,
-	CONSTRAINT FK_TCTeacherID FOREIGN KEY (TeaeherId)
-    REFERENCES MYDB.dbo.teachers(TeaeherId),
+	CONSTRAINT FK_TCTeacherID FOREIGN KEY (TeacherId)
+    REFERENCES MYDB.dbo.teachers(TeacherId),
     CONSTRAINT FK_TCCourseID FOREIGN KEY (CourseId)
     REFERENCES MYDB.dbo.courses(CourseId)
 )

@@ -8,7 +8,7 @@ as
   update dbo.schools
   SET schools.UpdatedAt = GETDATE()
   FROM Inserted i
-  WHERE schools.id = i.id
+  WHERE schools.SchoolId = i.SchoolId
 go 
 /*
 --------------- Trigger exam
@@ -29,7 +29,7 @@ as
   update dbo.courses
   SET courses.UpdatedAt = GETDATE()
   FROM Inserted i
-  WHERE courses.id = i.id
+  WHERE courses.CourseId = i.CourseId
 go 
 --------------- Trigger student
 create trigger tr_U_student
@@ -39,7 +39,7 @@ as
   update dbo.students
   SET students.UpdatedAt = GETDATE()
   FROM Inserted i
-  WHERE students.id = i.id
+  WHERE students.StudentId = i.StudentId
 go 
 --------------- Trigger teacher
 create trigger tr_U_teacher
@@ -49,4 +49,4 @@ as
   update dbo.teachers
   SET teachers.UpdatedAt = GETDATE()
   FROM Inserted i
-  WHERE teachers.id = i.id
+  WHERE teachers.TeacherId = i.TeacherId

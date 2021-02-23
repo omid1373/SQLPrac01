@@ -42,7 +42,8 @@ Create table terms(
 )
 go
 Create table exams(
-	ExamID nvarchar(30) PRIMARY KEY not null,
+	ExamID int PRIMARY KEY not null,
+	ExamType nvarchar(30),
 )
 go
 Create table teachers(
