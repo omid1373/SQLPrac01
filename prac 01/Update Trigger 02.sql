@@ -6,7 +6,7 @@ on school_teachers
 after insert
 as
   update dbo.school_teachers
-  SET school_teachers.updated_at = GETDATE()
+  SET school_teachers.UpdatedAt = GETDATE()
   FROM Inserted i
   WHERE school_teachers.id = i.id
 go 
@@ -16,7 +16,7 @@ on student_courses
 after insert
 as
   update dbo.student_courses
-  SET student_courses.updated_at = GETDATE()
+  SET student_courses.UpdatedAt = GETDATE()
   FROM Inserted i
   WHERE student_courses.id = i.id
 go 
@@ -26,7 +26,7 @@ on course_exams
 after insert
 as
   update dbo.course_exams
-  SET course_exams.updated_at = GETDATE()
+  SET course_exams.UpdatedAt = GETDATE()
   FROM Inserted i
   WHERE course_exams.id = i.id
 go 
@@ -36,7 +36,7 @@ on student_scores
 after insert
 as
   update dbo.student_scores
-  SET student_scores.updated_at = GETDATE()
+  SET student_scores.UpdatedAt = GETDATE()
   FROM Inserted i
   WHERE student_scores.id = i.id
 go 
@@ -46,7 +46,7 @@ on teacher_courses
 after insert
 as
   update dbo.teacher_courses
-  SET teacher_courses.updated_at = GETDATE()
+  SET teacher_courses.UpdatedAt = GETDATE()
   FROM Inserted i
   WHERE teacher_courses.id = i.id
 go 

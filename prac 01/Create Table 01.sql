@@ -3,51 +3,52 @@ use MYDB
 go
 
 Create table schools(
-	id int identity(1,1) PRIMARY KEY not null,
-	name varchar(30) null,
-	address varchar(100) null,
-	contact_number varchar(12) null,
-	year varchar(4) null,
-	principal varchar(30) null,
-	created_at datetime null,
-	updated_at datetime null
+	SchoolId int identity(1,1) PRIMARY KEY not null,
+	Name nvarchar(30) null,
+	Address nvarchar(100) null,
+	ContactNumber nvarchar(12) null,
+	year nvarchar(4) null,
+	Principal nvarchar(30) null,
+	CreatedAt datetime null,
+	UpdatedAt datetime null
 )
 go
 Create table students(
-	id int identity(1,1) PRIMARY KEY not null,
-	school_id int,
-	national_id varchar(10) UNIQUE,
-	first_name varchar(30) null,
-	last_name varchar(30) null,
-	phone_number varchar(12) null,
-	CONSTRAINT FK_SchoolID FOREIGN KEY (school_id)
-    REFERENCES schools(id),
-	created_at datetime null,
-	updated_at datetime null
+	StudentId int identity(1,1) PRIMARY KEY not null,
+	SchoolId int,
+	NationalId nvarchar(10) UNIQUE,
+	FirstName nvarchar(30) null,
+	LastName nvarchar(30) null,
+	PhoneNumber nvarchar(12) null,
+	CreatedAt datetime null,
+	UpdatedAt datetime null
+	CONSTRAINT FK_SchoolID FOREIGN KEY (SchoolId)
+    REFERENCES schools(SchoolId),
 )
 go
 Create table courses(
-	id int identity(1,1) PRIMARY KEY not null,
-	name varchar(30) null,
-	book varchar(30) null,
-	term varchar(12) null,
-	year int default 1400,
-	credit int default 1,
-	created_at datetime null,
-	updated_at datetime null
+	CourseId int identity(1,1) PRIMARY KEY not null,
+	Name nvarchar(30) null,
+	Book nvarchar(30) null,
+	Credit int default 1,
+	CreatedAt datetime null,
+	UpdatedAt datetime null
+)
+go
+Create table terms(
+	TermID int identity(1,1) PRIMARY KEY not null,
+	TermNumber int default 1,
+	Year int default 1400,
 )
 go
 Create table exams(
-	id int identity(1,1) PRIMARY KEY not null,
-	ex_type varchar(30) null,
-	created_at datetime null,
-	updated_at datetime null
+	ExamID nvarchar(30) PRIMARY KEY not null,
 )
 go
 Create table teachers(
-	id int identity(1,1) PRIMARY KEY not null,
-	first_name varchar(30) null,
-	last_name varchar(30) null,
-	created_at datetime null,
-	updated_at datetime null
+	TeacherId int identity(1,1) PRIMARY KEY not null,
+	FirstName nvarchar(30) null,
+	LastName nvarchar(30) null,
+	CreatedAt datetime null,
+	UpdatedAt datetime null
 )

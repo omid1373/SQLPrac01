@@ -9,3 +9,5 @@ go
 drop table student_scores
 go
 drop table teacher_courses
+go 
+drop table course_terms

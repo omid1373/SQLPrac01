@@ -6,27 +6,28 @@ on schools
 after update
 as
   update dbo.schools
-  SET schools.updated_at = GETDATE()
+  SET schools.UpdatedAt = GETDATE()
   FROM Inserted i
   WHERE schools.id = i.id
 go 
+/*
 --------------- Trigger exam
 create trigger tr_U_exam
 on exams
 after update
 as
   update dbo.exams
-  SET exams.updated_at = GETDATE()
+  SET exams.UpdatedAt = GETDATE()
   FROM Inserted i
   WHERE exams.id = i.id
-go 
+go */
 --------------- Trigger course
 create trigger tr_U_course
 on courses
 after update
 as
   update dbo.courses
-  SET courses.updated_at = GETDATE()
+  SET courses.UpdatedAt = GETDATE()
   FROM Inserted i
   WHERE courses.id = i.id
 go 
@@ -36,7 +37,7 @@ on students
 after update
 as
   update dbo.students
-  SET students.updated_at = GETDATE()
+  SET students.UpdatedAt = GETDATE()
   FROM Inserted i
   WHERE students.id = i.id
 go 
@@ -46,6 +47,6 @@ on teachers
 after update
 as
   update dbo.teachers
-  SET teachers.updated_at = GETDATE()
+  SET teachers.UpdatedAt = GETDATE()
   FROM Inserted i
   WHERE teachers.id = i.id
