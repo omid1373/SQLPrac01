@@ -7,7 +7,9 @@ go
 create function func_studentCourses(@id int , @term int , @year int) 
 returns TABLE
 AS
-return(select s.* ,c.Name as CourseName , c.Book , t.TermNumber , t.Year from students s
+return(select s.* ,c.Name as CourseName , c.Book , t.TermNumber 
+, t.Year , sc.StudentCourseID , sc.CourseTermId
+ from students s
 inner join student_courses sc on s.StudentId = sc.StudentId
 inner join course_terms ct on sc.CourseTermId = ct.CourseTermId 
 inner join courses c on c.CourseId = ct.CourseId

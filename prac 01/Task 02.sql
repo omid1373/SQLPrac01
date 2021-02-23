@@ -1,15 +1,24 @@
 /* -------------------Task 1
-‰„—Â „?«‰ —„ Ê Å«?«‰ —„
+‰„—Â „?«‰ —„ Ê Å«?«‰ —„ À» 
 */
 use MYDB
 go
-create function func_studentCourses(@id int) 
-returns TABLE
-AS
-return(select s.* from students s
-inner join student_courses sc on s.StudentId = sc.StudentId
-where 
-)
-go
+declare @studentId as int
+declare @term as int
+declare @grade as int
+declare @year as int
+set @studentId = 1;
+set @term = 1;
+set @grade = 15;
+set @year = 2019;
 
-select * from func_studentCourses(3,2,2019)
+select fn.StudentCourseID , ce.CourseExamId into temp 
+from func_studentCourses(@studentId , @term , @year) as fn
+inner join course_exams as ce on ce.CourseTermId = fn.CourseTermId
+--select * from temp
+
+insert into student_scores (StudentCourseId , CourseExamId , Grade) 
+select * , @grade from temp
+
+drop table temp
+

@@ -37,7 +37,7 @@ Create table student_courses(
 )
 go
 Create table course_exams(
-	CourseExamID int identity(1,1) PRIMARY KEY not null,
+	CourseExamId int identity(1,1) PRIMARY KEY not null,
 	CourseTermId int,
 	ExamId int,
 	CreatedAt datetime null,
