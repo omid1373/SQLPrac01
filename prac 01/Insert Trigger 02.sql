@@ -9,13 +9,13 @@ as
   SET school_teachers.CreatedAt = GETDATE()
   FROM Inserted i
   WHERE school_teachers.SchoolTeacherId = i.SchoolTeacherId
-go 
+go
 --------------- Trigger student_course
 create trigger tr_C_course_term
 on course_terms
 after insert
 as
-  update dbo.student_courses
+  update dbo.course_terms
   SET course_terms.CreatedAt = GETDATE()
   FROM Inserted i
   WHERE course_terms.CourseTermId = i.CourseTermId

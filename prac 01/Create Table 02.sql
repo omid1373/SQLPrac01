@@ -15,13 +15,13 @@ go
 Create table course_terms(
 	CourseTermId int identity(1,1) PRIMARY KEY not null,
 	CourseId int,
-	ExamId int,
+	TermId int,
 	CreatedAt datetime null,
 	UpdatedAt datetime null,
 	CONSTRAINT FK_CTCourseId FOREIGN KEY (CourseId)
     REFERENCES MYDB.dbo.courses(CourseId),
-    CONSTRAINT FK_CTExamID FOREIGN KEY (ExamId)
-    REFERENCES MYDB.dbo.exams(ExamID)
+    CONSTRAINT FK_CTExamID FOREIGN KEY (TermId)
+    REFERENCES MYDB.dbo.terms(TermId)
 )
 go
 Create table student_courses(
