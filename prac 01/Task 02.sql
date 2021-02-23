@@ -21,4 +21,3 @@ insert into student_scores (StudentCourseId , CourseExamId , Grade)
 select * , @grade from temp
 
 drop table temp
-
