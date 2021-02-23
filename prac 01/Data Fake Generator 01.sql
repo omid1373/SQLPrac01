@@ -29,26 +29,29 @@ insert into terms(TermNumber,Year) values
 (1,2021),
 (2,2021)
 go
-insert into course_terms(CourseId,TermID) values
+insert into course_terms(CourseId,TermId) values
 (1,1),
 (1,2),
 (1,3),
-(2,1),
+(3,1),
 (2,2),
 (5,4),
 (4,5),
 (6,6),
 (3,3)
 go
-insert into student_courses (CourseTermId,StudentId) values
+insert into student_courses (StudentId , CourseTermId) values
 (1,1),
+(1,4),
 (1,2),
 (1,3),
+(1,5),
+(2,4),
 (2,1),
-(2,2),
-(5,5),
-(4,4),
-(6,3),
+(2,6),
+(5,7),
+(4,8),
+(2,3),
 (3,2)
 go
 select * from schools
