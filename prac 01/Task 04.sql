@@ -30,6 +30,7 @@ group by ce.CourseExamId
 go
 
 
+------------------------Test----------------------
 
 use MYDB
 go

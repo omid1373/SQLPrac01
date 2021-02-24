@@ -15,6 +15,8 @@ where tc.TeacherId = @teacherId
 	and ct.TermId = @termId
 go
 
+------------------------Test----------------------
+
 declare @teacherId int
 declare @termId int
 set @teacherId = 3;

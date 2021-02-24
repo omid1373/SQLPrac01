@@ -34,4 +34,7 @@ where ct.TermId = @termId
 	and s.StudentId = @studentId
 go
 
+
+------------------------Test----------------------
+
 exec TakenCourses01 @termId = 1 , @studentId = 1;

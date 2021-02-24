@@ -30,6 +30,7 @@ group by sc.StudentId
 go
 
 
+------------------------Test----------------------
 
 use MYDB
 go

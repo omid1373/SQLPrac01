@@ -56,6 +56,7 @@ end
 go
 
 
+------------------------Test----------------------
 
 exec InsertGrades02 @studentId = 5, @courseTermId = 2 , @examId = 1 , @grade = 13;
 	

@@ -14,6 +14,8 @@ where ct.TermId = @termId
 group by sc.StudentId
 go 
 
+------------------------Test----------------------
+
 declare @termId int
 set @termId = 1;
 
