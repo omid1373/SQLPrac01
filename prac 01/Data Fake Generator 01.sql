@@ -13,13 +13,13 @@ insert into students (SchoolId,FirstName,LastName ,NationalId )values
 (2 ,'omid' , 'omidian' , '5656568888'),
 (2 ,'abbas' , 'abbasian' , '0012222222')
 go
-insert into courses (Name, Book) values
-('Literature' , 'Farsi'),
-('Literature' , 'Arabic'),
-('Math' , 'Algebra'),
-('Math' , 'Geometry'),
-('Physics','Electonics'),
-('Physics','Mechanics')
+insert into courses (Name, Book , Credit) values
+('Literature' , 'Farsi' , 1),
+('Literature' , 'Arabic' , 2),
+('Math' , 'Algebra' , 3),
+('Math' , 'Geometry' , 3),
+('Physics','Electonics' , 4),
+('Physics','Mechanics' , 4)
 go
 insert into terms(TermNumber,Year) values
 (1,2019),

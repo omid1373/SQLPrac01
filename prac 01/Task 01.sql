@@ -22,7 +22,7 @@ select * from func_studentCourses(3,2,2019)
 */
 use MYDB
 go
-create proc TakenCourses @termId int , @studentId int
+create proc TakenCourses01 @termId int , @studentId int
 as
  select s.* ,c.Name as CourseName , c.Book 
 , sc.StudentCourseId , sc.CourseTermId , ct.CourseTermId
@@ -34,4 +34,4 @@ where ct.TermId = @termId
 	and s.StudentId = @studentId
 go
 
-exec TakenCourses @termId = 1 , @studentId = 1;
+exec TakenCourses01 @termId = 1 , @studentId = 1;

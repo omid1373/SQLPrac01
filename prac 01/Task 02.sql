@@ -28,7 +28,7 @@ select @StudentCourseID , @CourseExamId , @grade
 use MYDB
 go
 --@courseTermId from prevoius step
-create proc InsertGrades @studentId int
+create proc InsertGrades02 @studentId int
 	, @courseTermId int , @examId int, @grade int
 as
 declare @CourseExamId int
@@ -57,5 +57,5 @@ go
 
 
 
-exec InsertGrades @studentId = 5, @courseTermId = 2 , @examId = 1 , @grade = 13;
+exec InsertGrades02 @studentId = 5, @courseTermId = 2 , @examId = 1 , @grade = 13;
 	
