@@ -1,5 +1,5 @@
 title Reset DataBase By Omid the great :D
-
+@echo off
 cd prac 01
 
 :choice

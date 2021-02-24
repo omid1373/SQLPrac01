@@ -1,4 +1,4 @@
-
+@echo off
 :begin
 set /P message="What Is Your Git Message? "
 echo Message : "%message%"

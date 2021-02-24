@@ -1,5 +1,5 @@
 title Data Fake Generator By Omid the great :D
-
+@echo off
 cd prac 01
 
 sqlcmd -i "Data Fake Generator 01.sql"
