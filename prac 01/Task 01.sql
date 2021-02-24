@@ -2,8 +2,7 @@
 
 ÈÑÇ? åÑ ÊÑã åÑ ÏÇäÔ ÂãæÒ å ÏÑæÓ ÑÇ ÇäÊÎÇÈ ˜ÑÏå ÇÓÊ
 */
-use MYDB
-go
+/*
 create function func_studentCourses(@id int , @term int , @year int) 
 returns TABLE
 AS
@@ -19,5 +18,20 @@ where t.TermNumber = @term
 	and t.Year = @year
 )
 go
-
 select * from func_studentCourses(3,2,2019)
+*/
+use MYDB
+go
+create proc TakenCourses @termId int , @studentId int
+as
+ select s.* ,c.Name as CourseName , c.Book 
+, sc.StudentCourseId , sc.CourseTermId , ct.CourseTermId
+ from students s
+inner join student_courses sc on s.StudentId = sc.StudentId
+inner join course_terms ct on sc.CourseTermId = ct.CourseTermId 
+inner join courses c on c.CourseId = ct.CourseId
+where ct.TermId = @termId
+	and s.StudentId = @studentId
+go
+
+exec TakenCourses @termId = 1 , @studentId = 1;

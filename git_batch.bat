@@ -1,3 +1,4 @@
+title Git
 @echo off
 :begin
 set /P message="What Is Your Git Message? "

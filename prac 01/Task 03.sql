@@ -20,7 +20,7 @@ go
 
 declare @from datetime
 declare @to datetime
-set @from = GETDATE() - 10
+set @from = DATEADD( DAY , -10 ,GETDATE())
 set @to = GETDATE();
 
 select * from func_examInterval(@from , @to)
