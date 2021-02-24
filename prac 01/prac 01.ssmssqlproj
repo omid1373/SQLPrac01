@@ -79,6 +79,12 @@
           <AssociatedConnUserName />
           <FullPath>Data Fake Generator 03.sql</FullPath>
         </FileNode>
+        <FileNode Name="Task 08.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Task 08.sql</FullPath>
+        </FileNode>
         <FileNode Name="Task 05.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
@@ -138,12 +144,6 @@
           <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>Update Trigger 02.sql</FullPath>
-        </FileNode>
-        <FileNode Name="practice.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
-          <AssociatedConnUserName />
-          <FullPath>practice.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>

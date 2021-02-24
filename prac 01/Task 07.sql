@@ -36,8 +36,8 @@ use MYDB
 go
 declare @courseId int
 declare @termId int
-set @courseId = 1;
-set @termId = 2;
+set @courseId = 3;
+set @termId = 1;
 
 
 exec AvgCourse07 @courseId , @termId;
