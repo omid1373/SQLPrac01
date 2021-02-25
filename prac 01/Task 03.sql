@@ -37,11 +37,12 @@ order by Exam_time desc
 go
 
 -------------------Test------------------
-
+use MYDB
+go
 declare @from datetime
 declare @to datetime
-set @from = DATEADD( MINUTE , -200 ,GETDATE())
+set @from = DATEADD( MINUTE , -500 ,GETDATE())
 set @to = GETDATE();
 
-exec ExamInterval03 @from , @to;
+exec MYDB.dbo.ExamInterval03 @from , @to;
 

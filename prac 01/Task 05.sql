@@ -15,7 +15,8 @@ group by sc.StudentId
 go 
 
 ------------------------Test----------------------
-
+use MYDB
+go
 declare @termId int
 set @termId = 1;
 

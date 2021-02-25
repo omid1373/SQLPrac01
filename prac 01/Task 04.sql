@@ -19,14 +19,15 @@ go
 
 create procedure AVGInterval04 @from datetime , @to datetime
 as
---select ce.CourseExamId ,SUM(ss.Grade * c.Credit)/SUM(c.Credit) as Average
-select ce.CourseExamId , AVG(ss.Grade)
-from student_scores as ss 
-inner join course_exams as ce on ce.CourseExamId = ss.CourseExamId
-inner join course_terms as ct on ct.CourseTermId = ce.CourseTermId
---inner join courses as c on c.CourseId = ct.CourseId
-where ce.CreatedAt between @from and @to
-group by ce.CourseExamId
+begin
+	select ce.CourseExamId , AVG(ss.Grade)
+		from student_scores as ss 
+		inner join course_exams as ce on ce.CourseExamId = ss.CourseExamId
+		inner join course_terms as ct on ct.CourseTermId = ce.CourseTermId
+		--inner join courses as c on c.CourseId = ct.CourseId
+		where ce.CreatedAt between @from and @to
+		group by ce.CourseExamId
+end
 go
 
 
