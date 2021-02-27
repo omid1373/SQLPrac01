@@ -4,7 +4,6 @@
 USE master
 GO
 
--- Drop the database if it already exists
 IF  EXISTS (
 	SELECT name 
 		FROM sys.databases 
@@ -13,5 +12,9 @@ IF  EXISTS (
 DROP DATABASE MYDB, sysname, MYDB
 GO
 
-CREATE DATABASE MYDB
+USE master; 
+GO 
+CREATE DATABASE  MYDB 
+ON      ( NAME = MYDB, FILENAME = 'C:\Users\Administrator\Documents\DataBase\MYDB.mdf') 
+LOG ON  ( NAME = MYDB, FILENAME = 'C:\Users\Administrator\Documents\DataBase\MYDB.ldf'); 
 GO

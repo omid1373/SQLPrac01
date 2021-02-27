@@ -13,11 +13,12 @@ Create table ztest01(
 )
 go
 
+
 declare @iterate nvarchar(10)
 declare @i int
-declare @name nvarchar(10)
-declare @ContactNumber nvarchar(10)
-declare @address nvarchar(10)
+declare @name nvarchar(15)
+declare @ContactNumber nvarchar(12)
+declare @address nvarchar(20)
 declare @year int
 set @i = 0;
 set @year = 2000;
@@ -34,6 +35,6 @@ begin
 end;
 go
 
-
 select  COUNT(*) as Z_Test_Table_01_Count from ztest01
 
+--select top 100 *  from ztest01 order by CreatedAt desc
