@@ -12,7 +12,12 @@ begin
 	with cte_CV
 	as(
 	select c.Name as CourseName ,c.Book, AVG(ss.Grade) as Grade , c.Credit , t.TermNumber
-	from student_scores as ss
+		, case
+		when AVG(ss.Grade)<10 then 'Failed'
+		else 'Passed'
+		end 
+		 as CourseStatus
+		from student_scores as ss
 		inner join student_courses as sc on sc.StudentCourseId = ss.StudentCourseId
 		inner join students as s on s.StudentId = sc.StudentId
 		inner join course_terms as ct on ct.CourseTermId = sc.CourseTermId
@@ -23,9 +28,16 @@ begin
 	)
 	select * from cte_CV 
 	union 
-	select @CV , @total , SUM(Grade*Credit)/SUM(Credit) , null , null  from cte_CV
+	select @CV , @total , SUM(Grade*Credit)/SUM(Credit) , SUM(Credit) , @year 
+		, Case
+			when SUM(Grade*Credit)/SUM(Credit) < 12 then 'ãÔÑæØ'
+			else 'ÞÈæá'
+			end
+		from cte_CV
 end
 go
+
+
 
 use MYDB
 go 
