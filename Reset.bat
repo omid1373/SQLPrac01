@@ -3,10 +3,14 @@ title Reset DataBase By Omid the great :D
 cd prac 01
 
 :choice
-set /P c=Only Trigger [Y/N]?
-if /I "%c%" EQU "Y" goto :trigger
+set /P c=Create Test Table[Y/N]?
+if /I "%c%" EQU "Y" goto :test
 if /I "%c%" EQU "N" goto :all
 goto :choice
+
+:test
+
+sqlcmd -i "Test Table 01.sql"
 
 :all
 

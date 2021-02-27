@@ -73,3 +73,6 @@ Create table teacher_courses(
     REFERENCES MYDB.dbo.courses(CourseId)
 )
 go
+
+create index ind_year on terms(year);
+create index ind_credit on courses(credit);
