@@ -52,7 +52,7 @@ Create table student_scores(
 	StudentScoreId int identity(1,1) PRIMARY KEY not null,
 	StudentCourseId int,
 	CourseExamId int,
-	Grade float not null,
+	Grade grade,
 	CreatedAt datetime null,
 	UpdatedAt datetime null,
 	CONSTRAINT FK_StudentCourseID FOREIGN KEY (StudentCourseId)

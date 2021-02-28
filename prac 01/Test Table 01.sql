@@ -9,7 +9,7 @@ Create table ztest01(
 	ContactNumber nvarchar(12) null,
 	year nvarchar(4) null,
 	BaseId int,
-	RollId int,
+	RoleId int,
 	value nvarchar(10),
 	CreatedAt datetime null,
 	UpdatedAt datetime null

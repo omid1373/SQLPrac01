@@ -12,7 +12,7 @@ declare @ContactNumber nvarchar(12)
 declare @address nvarchar(20)
 declare @year int
 declare @baseId int
-declare @rollId int
+declare @roleId int
 declare @value nvarchar(10)
 set @i = 0;
 set @year = 2000;
@@ -25,7 +25,7 @@ begin
 	set @ContactNumber  =  @iterate;
 	set @i = @i + 1;
 	set @baseId = FLOOR(RAND()*1000000+1);
-	set @rollId = FLOOR(RAND()*1000+1);
+	set @roleId = FLOOR(RAND()*1000+1);
 	set @value = '$ ' + CAST((@baseId - 20) as nvarchar)
 	if @i % 1000 =1 
 	begin
@@ -33,9 +33,9 @@ begin
 		begin tran
 	end
 	insert into ztest01 (Name , Address , ContactNumber , year , CreatedAt , UpdatedAt
-		, BaseId , RollId , value)
+		, BaseId , RoleId , value)
 		values (@name , @address, @ContactNumber , @year, GETDATE() ,GETDATE()
-			, @baseId , @rollId , @value)
+			, @baseId , @roleId , @value)
 end;
 commit tran
 go
@@ -46,5 +46,5 @@ go
 
 set statistics io on
 select z.testId , z.value from ztest01 as z
-inner join students as s on s.StudentId = z.BaseId
- where BaseId = 865233 --and RollId >= 500
+inner join students as s on s.StudentId = z.RoleId
+ where BaseId = 5 --and RollId >= 500

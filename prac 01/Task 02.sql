@@ -29,7 +29,7 @@ use MYDB
 go
 --@courseTermId from prevoius step
 create proc InsertGrades02 @studentId int
-	, @courseTermId int , @examId int, @grade int
+	, @courseTermId int , @examId int, @grade grade
 as
 declare @CourseExamId int
 declare @StudentCourseId int
@@ -58,5 +58,6 @@ go
 
 ------------------------Test----------------------
 set statistics io on
-exec InsertGrades02 @studentId = 1, @courseTermId = 2 , @examId = 1 , @grade = 13;
-	
+exec InsertGrades02 @studentId = 1, @courseTermId = 2 , @examId = 1 , @grade = 15.5;
+
+select * from student_scores order by CreatedAt desc
