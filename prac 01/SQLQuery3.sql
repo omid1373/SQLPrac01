@@ -39,3 +39,12 @@ begin
 end;
 commit tran
 go
+
+
+use MYDB
+go
+
+set statistics io on
+select z.testId , z.value from ztest01 as z
+inner join students as s on s.StudentId = z.BaseId
+ where BaseId = 865233 --and RollId >= 500
