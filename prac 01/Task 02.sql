@@ -60,4 +60,6 @@ go
 set statistics io on
 exec InsertGrades02 @studentId = 1, @courseTermId = 2 , @examId = 1 , @grade = 15.5;
 
+
+
 select * from student_scores order by CreatedAt desc

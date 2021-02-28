@@ -34,5 +34,4 @@ as
 			FROM Inserted i 
 	else
 		  RAISERROR (N'Grade range is between 0 to 20' ,11,1);  
-		
 go 
