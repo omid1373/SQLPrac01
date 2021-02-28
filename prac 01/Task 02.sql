@@ -58,7 +58,7 @@ go
 
 ------------------------Test----------------------
 set statistics io on
-exec InsertGrades02 @studentId = 1, @courseTermId = 2 , @examId = 1 , @grade = 15.5;
+exec InsertGrades02 @studentId = 1, @courseTermId = 2 , @examId = 1 , @grade = 515.5;
 
 
 
