@@ -26,7 +26,7 @@ go
 declare @termId int
 declare @studentId int
 set @studentId = 3;
-set @termId = 2;
+set @termId = 1;
 
 execute presentedCourses02 @termId , @studentId
 

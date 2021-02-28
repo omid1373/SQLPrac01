@@ -1,6 +1,6 @@
 use MYDB
 go 
-create proc CV01 @year int, @studentId int
+alter proc CV01 @year int, @studentId int
 as
 begin
 	declare @total nvarchar(20)
@@ -33,7 +33,7 @@ begin
 			when SUM(Grade*Credit)/SUM(Credit) < 12 then 'ãÔÑæØ'
 			else 'ÞÈæá'
 			end
-		from cte_CV
+		from cte_CV 
 end
 go
 
