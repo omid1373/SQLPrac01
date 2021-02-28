@@ -26,7 +26,7 @@ begin
 	set @i = @i + 1;
 	set @baseId = FLOOR(RAND()*1000000+1);
 	set @rollId = FLOOR(RAND()*1000+1);
-	set @value = CAST((@baseId - 20) as nvarchar)+ ''
+	set @value = '$ ' + CAST((@baseId - 20) as nvarchar)
 	if @i % 1000 =1 
 	begin
 		commit tran

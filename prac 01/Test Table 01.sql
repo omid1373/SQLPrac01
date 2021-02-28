@@ -8,6 +8,9 @@ Create table ztest01(
 	Address nvarchar(100) null,
 	ContactNumber nvarchar(12) null,
 	year nvarchar(4) null,
+	BaseId int,
+	RollId int,
+	value nvarchar(10),
 	CreatedAt datetime null,
 	UpdatedAt datetime null
 )
@@ -48,12 +51,11 @@ select top 100 *  from ztest01 order by CreatedAt desc
 -------------------------shrink-----------------------
 DBCC SHRINKDATABASE (MYDB, 100);
 
-create index ind_address_test on ztest01(Address);
+create index ind_name_test on ztest01(Name);
 
 
 set statistics io on
 select * from ztest01 where Address like '%269977%'
-
 
 
 update ztest01 set Address = Address + '.'
