@@ -23,7 +23,7 @@ declare @year int
 set @i = 0;
 set @year = 2000;
 begin tran
-while @i < 1000000
+while @i < 10000000
 begin
 	set @iterate = CAST(@i as nvarchar);
 	set @name  = 'Ali ' + @iterate;
@@ -45,8 +45,15 @@ select  COUNT(*) as Z_Test_Table_01_Count from ztest01
 
 select top 100 *  from ztest01 order by CreatedAt desc
 
+-------------------------shrink-----------------------
+DBCC SHRINKDATABASE (MYDB, 100);
+
+create index ind_address_test on ztest01(Address);
+
+
 set statistics io on
-select * from ztest01 where Address like 'Vanak 269977'
+select * from ztest01 where Address like '%269977%'
+
 
 
 update ztest01 set Address = Address + '.'
