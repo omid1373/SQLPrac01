@@ -19,7 +19,10 @@ where t.TermNumber = @term
 )
 go
 select * from func_studentCourses(3,2,2019)
-*/
+
+
+
+-------------------------------Main---
 use MYDB
 go
 create proc TakenCourses01 @termId int , @studentId int
@@ -33,8 +36,9 @@ inner join courses c on c.CourseId = ct.CourseId
 where ct.TermId = @termId
 	and s.StudentId = @studentId
 go
-
-
+*/
+use MYDB
+go
 ------------------------Test----------------------
 
 exec TakenCourses01 @termId = 1 , @studentId = 1;

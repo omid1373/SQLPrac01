@@ -7,11 +7,11 @@ insert into schools (Name,ContactNumber,Principal)values
 ('Laleh' , '021656932145' , 'Rezaeeian')
 go
 insert into students (SchoolId,FirstName,LastName ,NationalId )values
-( 1 ,'mamad' , 'mamadian' , '3263659859'),
-(1 ,'naser' , 'naserian' , '5495959527'),
-(2 ,'ahmad' , 'ahmadian' , '0012195959'),
-(2 ,'omid' , 'omidian' , '5656568888'),
-(2 ,'abbas' , 'abbasian' , '0012222222')
+( 1 ,'„Õ„œ' , '„Õ„œ?«‰' , '3263659859'),
+(1 ,'‰«’—' , '‰«’—?«‰' , '5495959527'),
+(2 ,'«Õ„œ' , '«Õ„œ?«‰' , '0012195959'),
+(2 ,'«„?œ' , '”·ÃÊﬁ?' , '5656568888'),
+(2 ,'›«ÿ„Â' , '—Ê‘‰ œ·' , '0012222222')
 go
 insert into courses (Name, Book , Credit) values
 ('Literature' , 'Farsi' , 1),
